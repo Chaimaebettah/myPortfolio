@@ -1,0 +1,36 @@
+
+.navigation ul {
+  margin:0.5% 5%;
+  text-align: center;
+
+
+}
+.navigation ul li:hover{
+background-color: rgba(29, 29, 29, 0.42);
+}
+
+
+
+.navigation a:hover{
+  color:white;
+
+
+}
+
+
+.full-name{
+  font-size: 40px;
+}
+
+
+.hello{
+  font-size: 30px;
+}
+
+.titles{
+  text-align: center;
+  margin:5%;
+}
+/*.image-portfolio {
+  max-width:50%;
+}*/
