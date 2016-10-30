@@ -30,3 +30,41 @@
     display:block;
 
 }
+.about-me-container{
+  text-align: center;
+  display:flex;
+  flex-direction: row;
+}
+
+.image-portfolio{
+ flex:1;
+
+}
+.about-me-intro{
+  flex:2;
+  padding-right:5%;
+
+
+}
+
+.contact-me ul{
+  display:flex;
+  flex-direction: row;
+  margin-left: 30%;
+  margin-top: 5%;
+
+
+}
+
+.contact-me ul li {
+  padding-left: 5%;
+
+}
+.contact-me ul li a{
+  color:rgba(29, 29, 29, 0.42);
+  font-size: 30px;
+
+
+
+
+}
