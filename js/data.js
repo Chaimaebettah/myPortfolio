@@ -25,14 +25,14 @@ var data = [
     // title: 'Game Bug Dodger',
     category:'udacity',
     // description: 'This is simple aboute me with some sections and some styling',
-    projectLink: 'https://chaimaebettah.github.io/about_me/',
+    projectLink: 'https://chaimaebettah.github.io/game-engine/',
     imagePath: './images/bug_dodger_thumb.png',
   },
   {
     // title: 'Map Location Info',
     category:'udacity',
     // description: 'This is simple aboute me with some sections and some styling',
-    projectLink: 'https://chaimaebettah.github.io/about_me/',
+    projectLink: 'https://github.com/Chaimaebettah/map-project',
     imagePath: './images/location_info_thumb.png',
   }
 ];
