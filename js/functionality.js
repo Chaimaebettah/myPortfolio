@@ -1,5 +1,6 @@
 'use strict';
 function filterElements($triggerElements, $displayElements, allElementsName){
+  $displayElements.show();
   $triggerElements.on('click', 'a', function(event){
     var $triggerId = $(this).attr('id');
     if($triggerId === allElementsName){

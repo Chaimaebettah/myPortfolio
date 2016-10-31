@@ -18,16 +18,9 @@ $(document).ready(function(){
   }
 
   Project.prototype.toHtml = function(){
-    var $newProject = $('.project-template.template').clone();
-    $newProject.find('h5').html(this.title);
-    $newProject.find('p').html(this.description);
-    $newProject.find('li a').attr('href', this.projectLink);
-    $newProject.find('img').attr('src', this.imagePath);
-    $newProject.attr('data-category',this.category);
-
-    $newProject.removeClass('template');
-
-    return $newProject;
+    var source = $('#projects-templating').html();
+    var templateRender = Handlebars.compile(source);
+    return templateRender(this);
   };
 
   data.forEach(function(e){

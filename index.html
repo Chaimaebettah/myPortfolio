@@ -10,6 +10,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://use.fontawesome.com/2866858701.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script id="projects-templating" type="text/x-handlebars-template">
+      <div class="project-template template" data-category="{{category}}">
+          <div class="description">
+              <h5>{{title}}</h5>
+              <p></p>
+              <!-- <time datetime="2016-10-26">date</time> -->
+              <li><a href="{{projectLink}}"><img src="{{imagePath}}" alt=""></a></li>
+          </div>
+      </div>
+    </script>
+
 </head>
 
 <body>
@@ -58,21 +69,13 @@
             <a id="codefellows" class="button-codefellows-project button">Code Fellows</a>
             <a id="udacity" class="button-udacity-project button">Udacity</a>
         </div>
-        <div class="projects-container">
-          <div class="project-template template">
-              <div class="description">
-                  <h5></h5>
-                  <p></p>
-                  <!-- <time datetime="2016-10-26">date</time> -->
-                  <li><a href=""><img src="" alt=""></a></li>
-              </div>
-          </div>
-        </div>
+        <div class="projects-container"></div>
     </section>
     <section></section>
     <footer></footer>
   </div>
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/functionality.js"></script>
