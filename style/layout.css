@@ -1,6 +1,11 @@
+.main-container{
+  margin:0 auto;
+  width:90%;
+}
+
 .nav-icon {
-    position: fixed;
-    top: 2%;
+    position: absolute;
+    top: 1%;
     right: 5%;
     font-size: 40px;
 }
@@ -21,7 +26,7 @@
 
 .intro-container {
   text-align: center;
-  margin-top:10%;
+  margin-top:7%;
 }
 
 .navigation  a{
@@ -42,7 +47,6 @@
 }
 .about-me-intro{
   flex:2;
-  padding-right:5%;
 
 
 }
@@ -50,8 +54,9 @@
 .contact-me ul{
   display:flex;
   flex-direction: row;
-  margin-left: 30%;
-  margin-top: 5%;
+  /*margin-left: 30%;
+  margin-top: 5%;*/
+padding-left: 18%;
 
 
 }
@@ -59,12 +64,17 @@
 .contact-me ul li {
   padding-left: 5%;
 
+
 }
 .contact-me ul li a{
   color:rgba(29, 29, 29, 0.42);
-  font-size: 30px;
+  font-size: 20px;
+}
 
+.template{
+  display:none;
+}
 
-
-
+.hidden-span{
+  display:none;
 }

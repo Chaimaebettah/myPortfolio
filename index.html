@@ -7,37 +7,39 @@
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" href="style/modules.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://use.fontawesome.com/2866858701.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <nav class="navigation">
-            <span class="full-name"> Chaimae Bettah</span>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">skills</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+  <header>
+      <nav class="navigation">
+          <span class="full-name"> Chaimae Bettah</span>
+          <ul>
+              <li><a id="home" href="#">Home</a></li>
+              <li><a id="about" href="#">About</a></li>
+              <li><a id="projects" href="#">Projects</a></li>
+              <li><a id="skills" href="#">skills</a></li>
+              <li><a id="contact" href="#">Contact</a></li>
+          </ul>
             <div class="nav-icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
-            <div class="intro-container">
-                <p class="hello">Hello, I'm Chaimae Bettah</p>
-                <p>Front-end Developer</p>
-            </div>
-        </nav>
-    </header>
-    <section class="about-me">
+          <div class="intro-container">
+              <p class="hello">Hello, I'm Chaimae Bettah</p>
+              <p>Front-end Developer</p>
+          </div>
+      </nav>
+  </header>
+  <div class="main-container">
+    <section class="about-section" data-category="about">
         <h4 class="titles">About me</h4>
         <div class="about-me-container">
             <div class="image-portfolio">
                 <img src="images/chaimae-bettah.jpg" alt="">
             </div>
             <div class="about-me-intro">
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</span><span class="hidden-span"> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
                 <div class="contact-me">
                     <ul>
                         <li><a href="https://twitter.com/ChaimaeBettah"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -49,12 +51,31 @@
             </div>
         </div>
     </section>
-    <section></section>
+    <section class="projects-section" data-category="projects">
+        <h4 class="titles">Projects</h4>
+        <div class="buttons-container">
+            <a id="all" class="button-all-projects button">All</a>
+            <a id="codefellows" class="button-codefellows-project button">Code Fellows</a>
+            <a id="udacity" class="button-udacity-project button">Udacity</a>
+        </div>
+        <div class="projects-container">
+          <div class="project-template template">
+              <div class="description">
+                  <h5></h5>
+                  <p></p>
+                  <!-- <time datetime="2016-10-26">date</time> -->
+                  <li><a href=""><img src="" alt=""></a></li>
+              </div>
+          </div>
+        </div>
+    </section>
     <section></section>
     <footer></footer>
+  </div>
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/functionality.js"></script>
 </body>
 
 </html>
