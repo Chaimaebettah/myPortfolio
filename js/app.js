@@ -4,9 +4,7 @@ $(document).ready(function(){
   $('.nav-icon').on('click',function(){
     $('.navigation ul').toggle('slow');
   });
-});
 
-(function(){
   var projects = [];
 
   function Project(pro){
@@ -23,12 +21,11 @@ $(document).ready(function(){
     return templateRender(this);
   };
 
-  data.forEach(function(e){
-    projects.push(new Project(e));
-  });
 
 
-  projects.forEach(function(project){
-    $('.projects-container').append(project.toHtml());
+  })
+  .catch(function(response){
+    console.log('there was an error', response);
   });
-})();
+
+});
