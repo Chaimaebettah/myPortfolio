@@ -23,6 +23,18 @@ $(document).ready(function(){
 
 
 
+  var getProjectData = $.ajax({ dataType: 'json', url: '/js/data.json' });
+  getProjectData.then(function(response){
+    response.data.forEach(function(project){
+      projects.push(new Project(project));
+    });
+
+    projects.forEach(function(project){
+      $('.projects-container').append(project.toHtml());
+    });
+
+    filterElements($('.buttons-container'), $('.project-template'), 'all');
+    filterElements($('.navigation ul'), $('section'), 'home');
   })
   .catch(function(response){
     console.log('there was an error', response);
