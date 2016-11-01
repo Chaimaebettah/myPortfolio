@@ -16,8 +16,7 @@ function filterElements($triggerElements, $displayElements, allElementsName){
   });
 }
 
-filterElements($('.buttons-container'), $('.project-template'), 'all');
-filterElements($('.navigation ul'), $('section'), 'home');
+
 
 // function displaySections(){
 //

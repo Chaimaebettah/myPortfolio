@@ -4,9 +4,7 @@ $(document).ready(function(){
   $('.nav-icon').on('click',function(){
     $('.navigation ul').toggle('slow');
   });
-});
 
-(function(){
   var projects = [];
 
   function Project(pro){
@@ -23,12 +21,23 @@ $(document).ready(function(){
     return templateRender(this);
   };
 
-  data.forEach(function(e){
-    projects.push(new Project(e));
-  });
 
 
-  projects.forEach(function(project){
-    $('.projects-container').append(project.toHtml());
+  var getProjectData = $.ajax({ dataType: 'json', url: '/js/data.json' });
+  getProjectData.then(function(response){
+    response.data.forEach(function(project){
+      projects.push(new Project(project));
+    });
+
+    projects.forEach(function(project){
+      $('.projects-container').append(project.toHtml());
+    });
+
+    filterElements($('.buttons-container'), $('.project-template'), 'all');
+    filterElements($('.navigation ul'), $('section'), 'home');
+  })
+  .catch(function(response){
+    console.log('there was an error', response);
   });
-})();
+
+});
