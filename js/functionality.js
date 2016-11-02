@@ -18,6 +18,8 @@ function filterElements($triggerElements, $displayElements, allElementsName){
 
 
 
-// function displaySections(){
-//
-// }
+$(document).ready(function(){
+  $('.nav-icon').on('click',function(){
+    $('.navigation ul').toggle('slow');
+  });
+});
