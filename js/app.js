@@ -1,9 +1,5 @@
 'use strict';
-//show and hide the nav in the mobile screen
 (function(){
-  var projects = [];
-  var rating = [];
-
   function Project(pro){
     this.title = pro.title;
     this.description = pro.description;
@@ -23,28 +19,15 @@
 
   var getProjectData = $.ajax({ dataType: 'json', url: '/js/data.json' });
   getProjectData.then(function(response){
-    response.data.forEach(function(project){
-      projects.push(new Project(project));
-    });
-    function ratingProjects(){
-      // console.log(response.data);
-      return response.data.
-          filter(function(proj) {
-            console.log(proj.rating);
-            return proj.rating === 5.0;
-          }).
-          map(function(proj) {
-            console.log(proj.title);
-            // console.log('heyy');
-            return proj.title;
-          });
-    }
+    response.data
+    .map(function(project){
+      return new Project(project);
+    })
+    .reduce(function(prev, curr){
+      $('.projects-container').append(curr.toHtml());
+      return prev;
+    },[]);
 
-    ratingProjects();
-
-    projects.forEach(function(project){
-      $('.projects-container').append(project.toHtml());
-    });
 
     filterElements($('.buttons-container'), $('.project-template'), 'all');
     filterElements($('.navigation ul'), $('section'), 'home');
