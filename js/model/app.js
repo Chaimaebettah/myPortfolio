@@ -1,15 +1,9 @@
 'use strict';
-//show and hide the nav in the mobile screen
-$(document).ready(function(){
-  $('.nav-icon').on('click',function(){
-    $('.navigation ul').toggle('slow');
-  });
-
-  var projects = [];
-
+(function(){
   function Project(pro){
     this.title = pro.title;
     this.description = pro.description;
+    this.rating = pro.rating;
     this.projectLink = pro.projectLink;
     this.imagePath = pro.imagePath;
     this.category = pro.category;
@@ -25,19 +19,21 @@ $(document).ready(function(){
 
   var getProjectData = $.ajax({ dataType: 'json', url: '/js/data.json' });
   getProjectData.then(function(response){
-    response.data.forEach(function(project){
-      projects.push(new Project(project));
-    });
+    response.data
+    .map(function(project){
+      return new Project(project);
+    })
+    .reduce(function(prev, curr){
+      $('.projects-container').append(curr.toHtml());
+      return prev;
+    },[]);
 
-    projects.forEach(function(project){
-      $('.projects-container').append(project.toHtml());
-    });
 
     filterElements($('.buttons-container'), $('.project-template'), 'all');
-    filterElements($('.navigation ul'), $('section'), 'home');
+    // filterElements($('.navigation ul'), $('section'), 'home');
   })
   .catch(function(response){
     console.log('there was an error', response);
   });
 
-});
+})();
