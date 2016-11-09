@@ -30,7 +30,7 @@
 
 
     filterElements($('.buttons-container'), $('.project-template'), 'all');
-    filterElements($('.navigation ul'), $('section'), 'home');
+    // filterElements($('.navigation ul'), $('section'), 'home');
   })
   .catch(function(response){
     console.log('there was an error', response);
