@@ -71,15 +71,24 @@
         </div>
         <div class="projects-container"></div>
     </section>
-    <section></section>
+    <section class="section" id="repos">
+     <h2>Repos</h2>
+     <script id="repo-template" type="text/x-handlebars-template">
+       <a href="{{html_url}}"><h3>{{name}}</h3></a>
+       <p>{{description}}</p>
+     </script>
+   </section>
     <footer></footer>
   </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <!-- <script type="text/javascript" src="js/data.js"></script> -->
-    <script type="text/javascript" src="js/view/functionality.js"></script>
+    <script type="text/javascript" src="githubToken.js"></script>
     <script type="text/javascript" src="js/model/app.js"></script>
+    <script type="text/javascript" src="js/model/repo.js"></script>
+    <script type="text/javascript" src="js/view/functionality.js"></script>
+    <script type="text/javascript" src="js/view/repoView.js"></script>
     <script type="text/javascript" src="js/controller/homeController.js"></script>
     <script type="text/javascript" src="js/controller/aboutController.js"></script>
     <script type="text/javascript" src="js/controller/projectController.js"></script>
