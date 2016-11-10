@@ -1,5 +1,3 @@
-'use strict';
-
 (function(module) {
   var repoView = {};
   var repoCompiler = Handlebars.compile($('#repo-template').html());

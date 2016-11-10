@@ -1,5 +1,3 @@
-'use strict';
-
 (function(module) {
   var repos = {};
 
@@ -7,7 +5,7 @@
   repos.requestRepos = function(callback) {
     $.ajax({
       type: 'GET',
-      headers: {'Authorization': 'token ' + githubToken,},
+      headers: {Authorization: 'token ' + githubToken},
       url: 'https://api.github.com/users/chaimaebettah/repos',
       success: function(data) {
         console.log(data);
